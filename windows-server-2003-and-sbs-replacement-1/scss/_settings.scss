@@ -1,0 +1,132 @@
+//variables
+$white:#fff;
+$gray:#353636;
+$green:#b1c043;
+$black:#242021;
+$gray-light:#dedddd;
+$gray-text:#0B0B0B;
+
+//datatel
+$blue: #140f41;
+$blue-light: #84bfee;
+
+//zynstra
+$zynstra-blue: #140f41;
+
+//primary
+$primary-color: $blue-light;
+$secondary-color: $blue;
+
+$img-path: "../images";
+
+$backgroundBody:$white;
+$colorBody:$gray-text;
+$sidePad-lg: 10%;
+$sidePad-med: 5%;
+
+$header-bg: $white;
+$header-color: $gray;
+
+$hero-color: $white;
+
+$arrow: $primary-color;
+
+$link-1: $primary-color;
+$link-2: $primary-color;
+
+$btn-primary-bg: $blue;
+$btn-primary-color: $white;
+
+$footer-color: $secondary-color;
+$footer-bg: $white;
+
+//form
+$form-bg: $blue;
+$form-color: $white;
+$form-arrow: $white;
+$form-p: $white;
+$field-bg: lighten($blue, 90%);
+$field-color: $blue;
+
+.clr-white {
+  color: white;
+}
+
+// @include clearfix();
+@mixin cf() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+// @include box-sizing(border-box);
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+     -moz-box-sizing: $box-model; // Firefox <= 19
+          box-sizing: $box-model;
+}
+
+// @include border-radius(5px);
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+// @include main-font(16px, 400, normal);
+@mixin main-font($size: 1em, $weight: 200, $style: normal, $line-height: 140%) {
+  font-family: 'avenir', Helvetica, Arial, sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  font-style: $style;
+  line-height: $line-height;
+} 
+
+// @include transition(color .3s ease);
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+
+//----------------------------//
+//     BREAKPOINTS            //
+//----------------------------//
+
+@mixin breakpoint($point) {
+   @if $point == desk-lg {
+     @media (min-width:  100em) { @content ; }
+  }
+   @else if $point == tablet {
+     @media (max-width: 64em) { @content ; }
+  }
+  @else if $point == nav-break {
+     @media (max-width: 48em) { @content ; }
+  }
+    @else if $point == tablet-sm {
+     @media (max-width: 48em) { @content ; }
+  }
+   @else if $point == phone {
+     @media (max-width: 35em)  { @content ; }
+  }
+  @else if $point == tablet-portrait {
+     @media (max-width: 64em) and (orientation: portrait)  { @content ; }
+  }
+  @else if $point == portrait {
+     @media (orientation: portrait)  { @content ; }
+  }
+  @else if $point == landscape {
+     @media (orientation: landscape)  { @content ; }
+  }
+  @else if "number"{
+    @media (max-width: $point + "em" ) { @content ; }
+  }
+}

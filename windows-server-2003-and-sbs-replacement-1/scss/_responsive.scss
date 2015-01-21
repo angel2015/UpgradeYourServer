@@ -1,0 +1,125 @@
+// responsive video
+@media (max-width: 988px) {
+    .hero-image-header.video {
+        @include cf();
+        .text, .video {
+            width: 100%;
+            padding: 1em 2%;
+            @include cf();
+            max-width: 988px;
+            text-align: center;
+        }
+        .button {
+            width: 100%;
+            margin-bottom: 1em;
+        }
+        br {
+            display: none;
+        }
+    }
+}
+
+
+// default hero images
+@media (min-width: 786px) {
+    #hero-1 {
+        background-image: url(#{$img-path}/headerimage1.jpg);
+    }
+    #hero-2 {
+        background-image: url(#{$img-path}/headerimage2.jpg);
+        background-position: center top;
+    }
+    #hero-3 {
+        background-image: url(#{$img-path}/headerimage3.jpg);
+    }
+    #hero-4 {
+        background-image: url(#{$img-path}/headerimage4.jpg);
+    }
+    #hero-5 {
+        background-image: url(#{$img-path}/headerimage5.jpg);
+                background-position: center center;
+
+    }
+    #hero-datatel {
+        background-image: url(#{$img-path}/headerimage-datatel.jpg);
+        background-position: center center;
+        background-size: cover;
+    }
+}
+
+//big screens
+@media (min-width: 1921px) {
+    .bg-green {
+      background-color: $white;
+}
+}
+
+@media (min-width: 1800px) {
+    .hero-image-header {
+      min-height: 370px;
+}
+}
+
+// tablet & phone
+@media (max-width: 785px) {
+    // col
+    .col.fifty {
+        width: 100%;
+        margin: 0;
+    }
+
+    .text-container, .image-container {
+        width: 100%;
+        float: none;
+        text-align: center;
+        img {
+            max-width: 40%;
+            height: auto;
+        }
+    }
+    .image-container {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+    form {
+        section, fieldset {
+            width: 100%;
+        }
+        blockquote {
+            padding: 0 0 1em 0;
+        }
+    }
+    .button {
+        width: 100%;
+    }
+    footer {
+        text-align: center;
+    }
+    .container {
+        padding-left: $sidePad-med;
+        padding-right: $sidePad-med;
+    }
+    #hero-1 {
+        background-image: url(#{$img-path}/headerimage1-sm.jpg);
+    }
+    #hero-2 {
+        background-image: url(#{$img-path}/headerimage2-sm.jpg);
+        background-position: center top;
+    }
+    #hero-3 {
+        background-image: url(#{$img-path}/headerimage3-sm.jpg);
+    }
+    #hero-4 {
+        background-image: url(#{$img-path}/headerimage4-sm.jpg);
+        background-position: center top;
+    }
+    #hero-5 {
+        background-image: url(#{$img-path}/headerimage5-sm.jpg);
+        background-position: center top;
+    }
+
+    #hero-datatel {
+        background-image: url(#{$img-path}/headerimage-datatel-sm.jpg);
+        background-position: center center;
+    }
+}

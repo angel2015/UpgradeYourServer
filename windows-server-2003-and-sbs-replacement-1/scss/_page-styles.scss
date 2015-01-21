@@ -1,0 +1,485 @@
+ul, ol {
+    margin-left: 2em;
+    li {
+        margin-bottom: .5em;
+    }
+}
+
+// header
+header {
+    background-color: $header-bg;
+    color: $header-color;
+    @include breakpoint(phone) {
+        font-size: .9em;
+        height: 8em;
+    }
+    .container {
+        @include breakpoint(desk-lg) {
+           padding: 0;
+        }
+    }
+    .container div {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+    img {
+        margin-top: 5px;
+        height: 60px;
+        width: auto;
+        @include breakpoint(tablet-sm) {
+            height: 40px;
+            width: auto;
+        }
+    }
+    p {
+        color: $header-color;
+        text-align: right;
+        padding-top: 2em;
+        @include breakpoint(tablet) {
+            padding-top: 1em;
+        }
+        @include breakpoint(tablet-sm) {
+            padding-top: .2em;
+            line-height: 130%;
+            text-align: center;
+        }
+    }
+}
+
+.grad-white-rad {
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIyJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI4JSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjc3Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjU2JSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9yYWRpYWxHcmFkaWVudD4KICA8cmVjdCB4PSItNTAiIHk9Ii01MCIgd2lkdGg9IjEwMSIgaGVpZ2h0PSIxMDEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 2%, rgba(255,255,255,0.77) 28%, rgba(255,255,255,0) 56%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(2%,rgba(255,255,255,1)), color-stop(28%,rgba(255,255,255,0.77)), color-stop(56%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 2%,rgba(255,255,255,0.77) 28%,rgba(255,255,255,0) 56%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 2%,rgba(255,255,255,0.77) 28%,rgba(255,255,255,0) 56%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 2%,rgba(255,255,255,0.77) 28%,rgba(255,255,255,0) 56%); /* IE10+ */
+background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 2%,rgba(255,255,255,0.77) 28%,rgba(255,255,255,0) 56%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+
+}
+
+.hero-image-header {
+    min-height: 250px;
+    width: 100%;
+    @include cf();
+    position: relative;
+
+    section {
+        padding: 2em (($sidePad-lg)-1);
+        margin: 1em auto;
+        max-width: 1600px;
+       @include breakpoint(tablet-sm) {
+            margin: 0;
+            padding: 0 5%;
+        }
+    }
+    h1 {
+        @include main-font(3.6em, 200, normal, 100%);
+        letter-spacing: .01em;
+        color: $hero-color;
+        text-transform: uppercase;
+        margin: 1em auto .1em auto;
+        margin-top: 0\9;
+        padding-top: 70px\9;
+        @include breakpoint(tablet) {
+            margin: 1em auto .1em auto;
+            font-size: 2.6em;
+        }
+    }
+    h2 {
+        @include main-font(1.6em, 500, normal, 140%);
+        margin: 0 auto .2em auto;
+    }
+    &.arrow {
+        border-bottom: 1em solid $arrow;
+    }
+    &.arrow:after {
+        border-top: 30px solid $arrow;
+        border-left: 35px solid transparent;
+        border-right: 35px solid transparent;
+        width: 0;
+        height: 0;
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -40px;
+        left: 50%;
+        margin-left: -35.5px;
+    }
+}
+
+.zynstra-main {
+background: rgb(255,255,255); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmMGYwZjAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(240,240,240,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(240,240,240,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(240,240,240,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(240,240,240,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(240,240,240,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(240,240,240,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f0f0f0',GradientType=0 ); /* IE6-8 */
+
+
+    padding: 0 (($sidePad-lg)+3) 2em (($sidePad-lg)+3);
+
+
+    h1 {
+        font-weight: 200;
+        text-transform: uppercase;
+        margin: .5em 0;
+        line-height: 140%;
+    }
+
+    li {
+        list-style: none;
+        font-weight: 500;
+        margin: 0;
+    }
+}
+
+.video-text {
+    text-align: center;
+    font-size: 1.3em;
+    color: $blue;
+    border: 2px $blue solid;
+    display: inline-block;
+    padding: .4em 1em 0.2em 1em;
+    background-color: white;
+    @include transition(200ms all ease-in-out);
+    a {
+        text-decoration: none;
+        color: $blue;
+    }
+
+    &:hover {
+        text-decoration: none;
+        background: $blue;
+        @include transition(200ms all ease-in-out);
+
+        a {
+            color: white;
+        }
+    }
+}
+
+// body / text styles
+article {
+    section {
+        width: 100%;
+        padding: 0 (($sidePad-lg)-1);
+        margin: 4em auto;
+        max-width: 1600px;
+    }
+    section:nth-child(even) {
+        text-align: left;
+            @include breakpoint(phone) {
+                text-align: center;
+            }
+    }
+    section:nth-child(odd) {
+        text-align: right;
+                    @include breakpoint(phone) {
+                text-align: center;
+            }
+    }
+    section:first-child {
+        text-align: center;
+        max-width: 100%;
+    }
+    section:last-child {
+        text-align: center;
+        @include main-font(1.1em, 200, normal, 210%);
+        padding: 1.3em (($sidePad-lg)-1);
+        ;
+        position: relative;
+    }
+
+}
+
+// color helpers (buttons)
+.primary {
+    background-color: $btn-primary-bg;
+    color: $btn-primary-color;
+    &:hover {
+        background-color: lighten($btn-primary-bg, 5%);
+        @include transition(all .1s ease-in-out);
+    }
+}
+.green {
+    background-color: $btn-primary-bg;
+    color: $btn-primary-color;
+    &:hover {
+        background-color: lighten($btn-primary-bg, 5%);
+        @include transition(all .1s ease-in-out);
+    }
+}
+
+.blue-light {
+    background-color: $blue-light;
+    color: $white;
+    &:hover {
+        background-color: lighten($blue-light, 5%);
+        @include transition(all .1s ease-in-out);
+    }
+}
+
+.gray {
+    background-color: $gray;
+    color: $white;
+    &:hover {
+        background-color: lighten($gray, 5%);
+        @include transition(all .1s ease-in-out);
+    }
+}
+.white {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    @include transition(all .1s ease-in-out);
+
+    &:hover {
+        background-color: white;
+        color: $blue;
+        border: 1px solid white;
+        @include transition(all .1s ease-in-out);
+    }
+}
+
+.clr-gray {
+    color: $gray;
+}
+
+.clr-green {
+    color: $green;
+}
+
+
+
+// button
+.button {
+    cursor: pointer;
+    display: inline-block;
+    padding: .6em 2em;
+    margin: .8em 0;
+    text-align: center;
+    @include border-radius(50em);
+    @include breakpoint(phone) {
+        width: 100%;
+        font-size: 1.2em;
+    }
+}
+
+// containers & layout
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    padding-left: (($sidePad-lg)-2);
+    padding-right: (($sidePad-lg)-2);
+    @include cf();
+}
+
+.text-container {
+    width: 54%;
+    display: inline-block;
+    vertical-align: middle;
+    &.left {
+        text-align: left;
+        h1, p, ul {
+            text-align: left;
+        }
+    }
+    @include breakpoint(phone) {
+        width: 100%;
+        float: none!important;
+    }
+}
+.image-container {
+    width: 45%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    padding: 2em 13%;
+    height: 100%;
+    img {
+        width: 100%;
+        height: auto;
+    }
+    @include breakpoint(phone) {
+        width: 100%;
+        margin: 0;
+        padding: 0 5em;
+        float: none!important;
+    }
+}
+
+.col {
+    margin-left: -3px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+
+.a-right {
+    text-align: right;
+}
+.w30 {
+    width: 29%;
+    vertical-align: middle;
+    @include breakpoint(tablet-sm) {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
+}
+
+
+.w40 {
+    width: 39%;
+    vertical-align: middle;
+    @include breakpoint(tablet-sm) {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
+}
+
+.w50 {
+    width: 49%;
+    @include breakpoint(tablet-sm) {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
+}
+
+.w60 {
+    width: 59%;
+    vertical-align: middle;
+    @include breakpoint(tablet-sm) {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
+}
+
+.bg-white {
+    background-color: white;
+}
+
+// note - green turns to white at >1921px 
+.bg-green {
+    background-color: $primary-color;
+}
+
+.col.fifty {
+    width: 50%;
+    padding: 1em 7%;
+
+    form, fieldset {
+        padding: 0;
+        width: 100%;
+    }
+}
+
+// form 
+
+.tay-form {
+    padding: 4em 0;
+    background-color: $form-bg;
+    color: $form-color;
+    position: relative;
+    &.arrow:before {
+        border-top: 20px solid $form-arrow;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        width: 0;
+        height: 0;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        margin-left: -25.5px;
+    }
+    blockquote {
+        padding: 1em 20% 3em 4%;
+        color: $form-p;
+        border: 0;
+        @include breakpoint(phone) {
+            margin-bottom: 0;
+            padding-bottom: 1em;
+        }
+    }
+    section, fieldset {
+        width: 50%;
+        text-align: left;
+        display: inline-block;
+        border: 0;
+        outline: 0;
+        vertical-align: top;
+        color: $form-color;
+        @include breakpoint(tablet-sm) {
+            width: 100%;
+        }
+    }
+    textarea, select, input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"] {
+        height: 2.5em;
+        width: 100%;
+        padding: .5em;
+        outline: none;
+        border: none;
+        &:focus {
+            background-color: lighten($field-bg, 30%);
+            @include transition(all .2s ease-in-out);
+            color: $field-color;
+        }
+        &:valid, .valid {
+            background-color: white;
+            color: $field-color;
+            @include transition(all .2s ease-in-out);
+        }
+        &:invalid, .invalid {
+            background-color: darken($field-bg, 7%);
+            color: $field-color;
+            color: #972a2a;
+        }
+    }
+    input[type="submit"] {
+        border: 0px;
+    }
+    select {
+        background: url(#{$img-path}/arrow.png) no-repeat right #ddd;
+    }
+
+}
+
+// footer
+footer {
+    color: $footer-color;
+    background-color: $footer-bg;
+    @include breakpoint(tablet-sm) {
+        text-align: center;
+    }
+}
+
+
+
+//video
+.videoWrapper {
+    position: relative;
+    padding-bottom: 51%;
+    padding-top: 25px;
+    height: 0;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
